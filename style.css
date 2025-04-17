@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+:root {
+    --color-primary: #93d60c;
+    --transition: 0.3s ease;
+}
+
+.improved-contrast {
+    --color-primary: #10620b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat";
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.u-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------- */
+
+.layout-intro {
+    background-image:
+        linear-gradient(#000000bb,#000000bb),
+        url(img/background-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --------------------------------------- */
+
+.header__nav-utility {
+    background-color: black;
+}
+
+.nav-utility__links-list {
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.nav-utility__list-item {
+    display: inline-block;
+}
+
+.nav-utility__link {
+    display: block;
+    color: rgb(241, 241, 241);
+    padding: 10px 20px;
+}
+
+/* --------------------------------------- */
+
+.nav-main__links-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-main__link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 15px;
+    transition: var(--transition);
+    border-bottom: 3px solid #00000000;
+}
+
+.nav-main__link:hover {
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+/* --------------------------------------- */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero__container {
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero__title span {
+    color: var(--color-primary);
+    display: block;
+    font-weight: 600;
+}
+
+.hero__catchphrase {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero__order-link {
+    color: white;
+    margin: 0 auto;
+    padding: 15px 55px;
+    display: block;
+    width: fit-content;
+    border-radius: 10px;
+    text-transform: capitalize;
+    border: 2px solid var(--color-primary);
+}
