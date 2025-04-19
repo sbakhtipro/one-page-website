@@ -507,3 +507,54 @@ img:not(.carousel__img) {
 }
 
 /* --------------------------------------- */
+
+.team-illustration__grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    aspect-ratio: 1/3;
+}
+
+@media screen and (min-width:700px) {
+    .team-illustration__grid {
+        grid-template-columns: 30% calc(40% - 15px) calc(30% - 15px);
+        grid-template-rows: 1fr;
+        aspect-ratio: 3.2/1;
+    }
+}
+
+.team-illustration__img, .grid-child__img {
+    overflow: hidden;
+}
+
+.team-illustration__grid-child {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.grid-child__img {
+    aspect-ratio: 1/1;
+}
+
+.grid-child__ideas,.grid-child__team-work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-child__ideas span ,.grid-child__team-work span {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.grid-child__ideas {
+    background-color: rgb(202, 202, 202);
+}
+
+.grid-child__team-work {
+    background-color: var(--color-primary);
+    grid-column: 1 / -1;
+}
