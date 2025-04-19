@@ -47,7 +47,7 @@ img:not(.carousel__img) {
 
 .u-container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -95,12 +95,17 @@ img:not(.carousel__img) {
 .nav-utility__link {
     display: block;
     color: rgb(241, 241, 241);
-    padding: 15px 20px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
 }
 
 /* --------------------------------------- */
 
 .nav-main__links-list {
+    display: none;
+}
+
+/* .nav-main__links-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -123,9 +128,7 @@ img:not(.carousel__img) {
 .nav-main__logo img {
     width: 100px;
     padding: 10px 0;
-    /* border-top: 2px solid var(--color-primary);
-    border-bottom: 2px solid var(--color-primary); */
-}
+} */
 
 /* --------------------------------------- */
 
@@ -222,11 +225,12 @@ img:not(.carousel__img) {
 .benefits__card svg {
     color: var(--color-primary);
     width: 100px;
+    height: auto;
 }
 
 .benefits__card h3 {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .benefits__card p {

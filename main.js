@@ -1,3 +1,5 @@
+////////////////////////////// CAROUSEL //////////////////////////////
+
 const leftArrow = document.querySelector('.carousel__left-arrow')
 const rightArrow = document.querySelector('.carousel__right-arrow')
 const carouselSlider = document.querySelector('.carousel__slider')
