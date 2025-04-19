@@ -32,6 +32,8 @@ li {
 
 button {
     cursor: pointer;
+    border: none;
+    background-color: #00000000;
 }
 
 a {
@@ -85,7 +87,6 @@ img:not(.carousel__img) {
 
 .nav-utility__links-list {
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .nav-utility__list-item {
@@ -101,34 +102,94 @@ img:not(.carousel__img) {
 
 /* --------------------------------------- */
 
-.nav-main__links-list {
+.nav-main__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+}
+
+.nav-main__button {
+    margin-left: auto;
+    font-size: 2rem;
+}
+
+.nav-main__open-menu-icon, .nav-main__close-menu-icon {
     display: none;
 }
 
-/* .nav-main__links-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.nav-main__open-menu-icon {
+    color: white;
+}
+
+.nav-main__close-menu-icon {
+    color: gray;
+}
+
+.nav-main__links-list {
+    display: none;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.nav-main__logo-responsive, .nav-main__logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav-main__logo-responsive span, .nav-main__logo span {
+    color: var(--color-primary);
+}
+
+.nav-main__logo {
+    display: none;
+}
+
+.header__nav-main--menuisopen {
+    background-color: white;
 }
 
 .nav-main__link {
-    color: white;
+    color: rgb(34, 34, 34);
     text-transform: uppercase;
     font-weight: 600;
-    padding: 5px 15px;
+    padding: 5px 15px 10px 0;
+    display: block;
     transition: var(--transition);
     border-bottom: 3px solid #00000000;
 }
 
-.nav-main__link:hover {
-    color: var(--color-primary);
-    border-bottom: 3px solid var(--color-primary);
+.nav-main__logo-responsive--menuisopen {
+    color: black;
 }
 
-.nav-main__logo img {
-    width: 100px;
-    padding: 10px 0;
-} */
+@media screen and (min-width:900px) {
+    .nav-main__logo-responsive,.nav-main__button {
+        display: none;
+    }
+    .nav-main__links-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-main__link {
+        color: white;
+        padding: 10px 15px;
+    }
+    .nav-main__link:hover {
+        color: var(--color-primary);
+        border-bottom: 3px solid var(--color-primary);
+    }
+    .nav-main__logo {
+        display: block;
+    }
+}
+
+.visible {
+    display: block;
+}
 
 /* --------------------------------------- */
 
@@ -392,8 +453,6 @@ img:not(.carousel__img) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #00000000;
-    border: none;
     font-size: 3rem;
     font-weight: 700;
     color: gray;
